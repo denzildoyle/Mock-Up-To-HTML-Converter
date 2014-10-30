@@ -21,6 +21,7 @@
         
         <!-- CSS Files comes here -->
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/animate.css" rel="stylesheet" media="screen">
         <link href="css/styles.css" rel="stylesheet" media="screen">
 
         <meta name="robots" content="index, follow" />
@@ -47,11 +48,12 @@
         </div>
 
         <div class="background" id="background" hidden>
-            <div></div>
+            <div><h1 id="numbers">Thisis some test</h1></div>
         </div>
         <script type="text/javascript">
             function showModal() {
-                $('#background').addClass('animated fadeIn');;
+                $('#background').fadeIn("slow");
+                $('#numbers').addClass('animated fadeInDown');
             }
         </script>
         <!-- JavaScript plugins comes here -->
