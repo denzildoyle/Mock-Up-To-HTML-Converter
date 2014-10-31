@@ -47,13 +47,38 @@
             <button type="button" class="btn btn-success center-block" onclick="showModal()">Upload File</button>
         </div>
 
-        <div class="background" id="background" hidden>
-            <div><h1 id="numbers">Thisis some test</h1></div>
+        <div class="background" id="background" onclick="hideModal()" hidden>
+            <div id="modal-dialog">
+                <h1>Thank you for getting this far!</h1>
+                <h4>Email me your and I will get back to you as soon as I can.</h4>
+                <!-- <form role="form">
+                    <h4>Upload File</h4>
+                    <p>Upload file below and click submit to get a quote.</p>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" placeholder="Denzil Doyle">
+                    </div>
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" placeholder="yell@denzildoyle.me">
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="btn custom-file-input center-block">
+                    </div>
+                    <button type="submit" class="btn btn-success center-block">Upload</button>
+                </form> -->
+
+                <a href="mailto:yell@denzildoyle.me?Subject=Workspace&body=Hi Denzil, My name is" target="_top" type="submit" class="btn btn-success center-block">Continue</a>
+            </div>
         </div>
         <script type="text/javascript">
             function showModal() {
                 $('#background').fadeIn("slow");
-                $('#numbers').addClass('animated fadeInDown');
+                $('#modal-dialog').addClass('animated fadeInDown');
+            }
+            function hideModal() {
+                // $('#modal-dialog').addClass('animated fadeOutUp');
+                $('#background').fadeOut();
             }
         </script>
         <!-- JavaScript plugins comes here -->
