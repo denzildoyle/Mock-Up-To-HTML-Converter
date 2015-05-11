@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" itemscope itemtype="http://schema.org/Article">
     <head>
-        <title></title>
+        <title>workspce</title>
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -36,6 +36,13 @@
       
         <!-- Google Analytics -->
         <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-38539184-6', 'auto');
+          ga('send', 'pageview');
 
         </script>
         <!-- End Google Analytics -->
@@ -45,6 +52,7 @@
         <div class="col-md-6 col-md-offset-3 center">
             <h1>Convert, .PSDs, wireframes, muck-ups &amp; sketches into HTML and CSS</h1>
             <button type="button" class="btn btn-success center-block" onclick="showModal()">Upload File</button>
+
         </div>
 
         <div class="background" id="background" onclick="hideModal()" hidden>
@@ -68,13 +76,37 @@
                     <button type="submit" class="btn btn-success center-block">Upload</button>
                 </form> -->
 
-                <a href="mailto:yell@denzildoyle.me?Subject=Workspace&body=Hi Denzil, My name is" target="_top" type="submit" class="btn btn-success center-block">Continue</a>
+                <a href="mailto:yell@denzildoyle.me?Subject=Workspace&body=Hi Denzil...... (Don't forget to attach file/s), My name is" target="_top" type="submit" class="btn btn-success center-block" onclick="ga('send', 'event', 'button', 'click', 'Continue');">Continue</a>
             </div>
         </div>
+
+                    <style type="text/css">
+                .info li{
+                    float: left;
+                    list-style: none;
+                    text-align: center;
+                    margin: 10px 10px;
+                    display: inline;
+                }
+                ul{
+                    padding: 5px 30px;
+                }
+                .info{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            </style>
+            <ul class="info">
+                <li><a href="https://www.linkedin.com/in/denzildoyle">About me</a></li>
+                <li><a href="https://twitter.com/DenzilDoyle">Twitter</a></li>
+                <li><a href="http://www.denzildoyle.me">Website</a></li>
+            </ul>
         <script type="text/javascript">
             function showModal() {
                 $('#background').fadeIn("slow");
                 $('#modal-dialog').addClass('animated fadeInDown');
+                ga('send', 'event', 'button', 'click', 'upload');
             }
             function hideModal() {
                 // $('#modal-dialog').addClass('animated fadeOutUp');
